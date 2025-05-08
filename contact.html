@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous - WheyGo.fr</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Logo WheyGo.fr" id="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-page" class="container section-padding">
+            <h2>Contactez-Nous</h2>
+            <p class="page-intro" style="text-align:center; margin-bottom: 40px; font-size: 1.1rem;">Une question, une suggestion ou besoin d'informations complémentaires ? N'hésitez pas à nous écrire. Notre équipe vous répondra dans les plus brefs délais.</p>
+            
+            <form id="contact-form" class="contact-form-container">
+                <div class="form-group">
+                    <label for="user-email">Votre Adresse E-mail (obligatoire)</label>
+                    <input type="email" id="user-email" name="user-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Objet</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message</label>
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer votre E-mail</button>
+            </form>
+            <p style="text-align:center; margin-top:20px; font-size:0.9rem;">En cliquant sur "Envoyer votre E-mail", votre application de messagerie par défaut s'ouvrira avec les informations pré-remplies pour nous envoyer votre message.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WheyGo.fr - Tous droits réservés.</p>
+            <p>Les images d'ambiance sont générées par IA ou proviennent de banques d'images libres de droits.</p>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prévient la soumission standard du formulaire
+            
+            const userEmail = document.getElementById('user-email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (!userEmail) {
+                alert('Veuillez entrer votre adresse e-mail.');
+                return;
+            }
+            
+            const mailtoLink = `mailto:recordprodfrance@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Message de : " + userEmail + "\n\n" + message)}`;
+            
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>

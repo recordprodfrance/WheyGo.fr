@@ -1,0 +1,308 @@
+:root {
+    --primary-color: #0077C0; /* Bleu du logo */
+    --secondary-color: #FFD700; /* Jaune du logo */
+    --accent-color: #FDB813; /* Orange/Jaune plus soutenu pour les accents */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --background-color: #f9f9f9;
+    --card-background: #fff;
+    --border-color: #eee;
+    --font-family: 'Arial', sans-serif; /* Police simple et moderne */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: var(--card-background);
+    color: var(--text-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    height: 50px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 119, 192, 0.8), rgba(0, 119, 192, 0.7)), url('../images/ambiance_02.jpg') no-repeat center center/cover;
+    color: var(--light-text-color);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.section-padding {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+#about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: var(--card-background);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.benefit-item {
+    padding: 20px;
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.benefit-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Products Preview Section */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 80%;
+    height: auto;
+    max-height: 200px; /* Limiter la hauteur pour uniformité */
+    object-fit: contain; /* S'assurer que l'image entière est visible */
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    min-height: 60px; /* Pour aligner les boutons */
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header #logo {
+        margin-bottom: 10px;
+    }
+
+    header ul {
+        padding-top: 10px;
+    }
+
+    header ul li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .benefits-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card p {
+        min-height: auto; /* Enlever la hauteur min sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header ul li {
+        margin: 0 7px;
+        font-size: 0.9rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
