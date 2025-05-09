@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous - WheyGo.fr</title>
+    <style>
+:root {
+    --primary-color: #0077C0; /* Bleu du logo */
+    --secondary-color: #FFD700; /* Jaune du logo */
+    --accent-color: #FDB813; /* Orange/Jaune plus soutenu pour les accents */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --background-color: #f9f9f9;
+    --card-background: #fff;
+    --border-color: #eee;
+    --font-family: 'Arial', sans-serif; /* Police simple et moderne */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: var(--card-background);
+    color: var(--text-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    height: 50px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.section-padding {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Contact Page Specific Styles */
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+    header #logo {
+        margin-bottom: 10px;
+    }
+    header ul {
+        padding-top: 10px;
+    }
+    header ul li {
+        margin: 0 10px;
+    }
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header ul li {
+        margin: 0 7px;
+        font-size: 0.9rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo WheyGo.fr" id="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-page" class="container section-padding">
+            <h2>Contactez-Nous</h2>
+            <p class="page-intro" style="text-align:center; margin-bottom: 40px; font-size: 1.1rem;">Une question, une suggestion ou besoin d'informations complémentaires ? N'hésitez pas à nous écrire. Notre équipe vous répondra dans les plus brefs délais.</p>
+            
+            <form id="contact-form" class="contact-form-container">
+                <div class="form-group">
+                    <label for="user-email">Votre Adresse E-mail (obligatoire)</label>
+                    <input type="email" id="user-email" name="user-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Objet</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message</label>
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer votre E-mail</button>
+            </form>
+            <p style="text-align:center; margin-top:20px; font-size:0.9rem;">En cliquant sur "Envoyer votre E-mail", votre application de messagerie par défaut s'ouvrira avec les informations pré-remplies pour nous envoyer votre message.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WheyGo.fr - Tous droits réservés.</p>
+            <p>Les images d'ambiance sont générées par IA ou proviennent de banques d'images libres de droits.</p>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prévient la soumission standard du formulaire
+            
+            const userEmail = document.getElementById('user-email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (!userEmail) {
+                alert('Veuillez entrer votre adresse e-mail.');
+                return;
+            }
+            
+            const mailtoLink = `mailto:recordprodfrance@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Message de : " + userEmail + "\n\n" + message)}`;
+            
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
